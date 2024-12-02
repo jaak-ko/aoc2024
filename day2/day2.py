@@ -3,18 +3,17 @@ def is_safe(l):
     if sorted(l, reverse=True) != l and sorted(l) != l:
         return False
     
-    return all(
-            0 != abs(l[i] - l[i+1]) <= 3 for i in range(len(l) - 1) 
-            )   
+    return all( 0 != abs(l[i] - l[i+1]) <= 3 for i in range(len(l) - 1))   
+
 
 def p1(lines):
     
     return sum([int(is_safe(l)) for l in lines])
         
+        
 def p2(lines):
 
     num_of_safes = 0
-
     for line in lines:
         if is_safe(line):
             num_of_safes += 1
@@ -23,9 +22,7 @@ def p2(lines):
                 num_of_safes += 1
 
     return num_of_safes
-
-
-            
+    
 
 def main():
 
