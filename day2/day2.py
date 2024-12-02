@@ -26,12 +26,11 @@ def p2(lines):
 
 def main():
 
-    with open("input.txt") as f:
+    with open("day2/input.txt") as f:
 
         lines = [list(map(int, line.split())) for line in f.readlines()]
 
-    print("part 1:", p1(lines))
-    print("part 2:", p2(lines))
+    print(f"part 1: {p1(lines)}\npart 2: {p2(lines)}")
 
 
 if __name__ == "__main__":

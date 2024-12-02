@@ -1,5 +1,4 @@
 import numpy as np
-from collections import Counter
 
 def p1(lines):
     return \
@@ -18,12 +17,12 @@ def p2(lines):
     
 
 def main():
-    with open("input.txt") as f:
+    
+    with open("day1/input.txt") as f:
         lines = [l.split('   ') for l in f.read().splitlines()]
         lines = [[int(l[0]), int(l[1])] for l in lines]
 
-    print("part 1:", p1(lines))
-    print("part 2:", p2(lines))
+    print(f"part 1: {p1(lines)}\npart 2: {p2(lines)}")
 
 if __name__ == "__main__":
     main()
