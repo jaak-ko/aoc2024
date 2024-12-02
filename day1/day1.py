@@ -1,6 +1,6 @@
 import numpy as np
 
-def p1(lines):
+def p1(lines) -> int:
     return \
         np.sum(
             np.abs(
@@ -8,7 +8,8 @@ def p1(lines):
                             sorted([l[1] for l in lines])))
         )
         
-def p2(lines):
+        
+def p2(lines) -> int:
 
     lefts = [l[0] for l in lines]
     rights = [l[1] for l in lines]
