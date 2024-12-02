@@ -1,3 +1,5 @@
+
+
 def is_safe(l):
 
     if sorted(l, reverse=True) != l and sorted(l) != l:
@@ -17,8 +19,7 @@ def p2(lines):
     for line in lines:
         if is_safe(line):
             num_of_safes += 1
-        else:
-            if any(is_safe(line[:i] + line[i+1:]) for i in range(len(line))):
+        elif any(is_safe(line[:i] + line[i+1:]) for i in range(len(line))):
                 num_of_safes += 1
 
     return num_of_safes
