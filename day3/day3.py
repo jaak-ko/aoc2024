@@ -3,8 +3,7 @@ import numpy as np
 
 def p1(lines) -> int:
     
-    muls = re.findall(r"mul\((\d{1,3})\s*,\s*(\d{1,3})\s*\)", lines)
-
+    muls = re.findall(r"mul\((\d{1,3}),(\d{1,3})\)", lines)
     return sum([int(mul[0]) * int(mul[1]) for mul in muls])
         
         
