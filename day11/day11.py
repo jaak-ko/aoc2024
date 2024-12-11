@@ -1,21 +1,20 @@
 from functools import cache
 
 @cache
-def count(stone, iterations):
-
+def count(stone, iteration):
     # if you're wondering, i myself am not this smart
 
-    if iterations == 0: return 1
-    if stone == 0: return count(1, iterations-1)
+    if iteration == 0: return 1
+    if stone == 0: return count(1, iteration-1)
 
     string = str(stone)
     length = len(string)
 
     if length % 2 == 0:
-        return count(int(string[:length//2]), iterations - 1) + \
-               count(int(string[length//2:]), iterations - 1)
+        return count(int(string[:length//2]), iteration - 1) + \
+               count(int(string[length//2:]), iteration - 1)
     
-    return count(stone * 2024, iterations - 1)
+    return count(stone * 2024, iteration - 1)
 
 def main():
 
